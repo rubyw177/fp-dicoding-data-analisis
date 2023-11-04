@@ -50,18 +50,22 @@ def create_pertanyaan4_df(df):
 
 def forecast_MA_df(df):
     forecast_period = 7
+
     for i in range(forecast_period):
+        data_to_append = []
         last_ma = df["MovingAverage"].iloc[-5].mean()
         next_day = df["day"].iloc[-1] + 1
         last_year = df["year"].iloc[-1]
 
-        # add next data to the dataframe
-        df = df.append({
+        data_to_append.append({
             "year": last_year,
             "day": next_day,
             "PM2.5": last_ma,
             "MovingAverage": last_ma,
-        }, ignore_index=True)
+        })
+        # Use pd.concat to append the data in a single step
+        df = pd.concat([df, pd.DataFrame(data_to_append)], ignore_index=True)
+
     return df
     
 all_df = pd.read_csv("all_air_data_final.csv")

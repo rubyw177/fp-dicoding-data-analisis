@@ -104,6 +104,7 @@ Follow these steps to set up and run the project:
    jupyter notebook fp_notebook.ipynb
    ```
    - This allows you to explore and preprocess the dataset interactively.
+     
 4. **Run the Streamlit Dashboard**
    ```bash
    streamlit run fp_streamlit.py

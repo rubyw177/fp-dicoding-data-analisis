@@ -92,8 +92,8 @@ The dashboard includes:
 Follow these steps to set up and run the project:
 1. **Clone the Repository**
    ```bash
-   git clone <repository_url>
-   cd project_root
+   git clone https://github.com/rubyw177/fp-dicoding-data-analisis.git
+   cd fp-dicoding-data-analisis
    ```
 2. **Install Dependencies**
    ```bash
